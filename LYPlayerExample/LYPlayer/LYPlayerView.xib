@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3Nf-ey-82A" customClass="LYPlayerView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LYPlayer.bundle/bg_media_default.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZV4-S8-EQu">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="FXr-UP-OCl" appends="YES" id="i8E-j3-o24"/>
+                        <outletCollection property="gestureRecognizers" destination="ibs-gz-Jkz" appends="YES" id="otu-mA-grr"/>
+                        <outletCollection property="gestureRecognizers" destination="9QX-Bi-rVz" appends="YES" id="htX-37-O2Q"/>
+                    </connections>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PH1-wK-SjZ">
+                    <rect key="frame" x="0.0" y="130" width="320" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHI-Qf-3J2">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="U2A-bU-MxY"/>
+                            </constraints>
+                            <state key="normal" image="LYPlayer.bundle/full_play_btn.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="LYPlayer.bundle/full_pause_btn"/>
+                            <connections>
+                                <action selector="playOrPause:" destination="3Nf-ey-82A" eventType="touchUpInside" id="x9o-6x-2H8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXl-aH-dpo">
+                            <rect key="frame" x="270" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="sNJ-8d-o0r"/>
+                            </constraints>
+                            <state key="normal" image="LYPlayer.bundle/mini_launchFullScreen_btn.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="LYPlayer.bundle/full_minimize_btn"/>
+                            <connections>
+                                <action selector="switchOrientation:" destination="3Nf-ey-82A" eventType="touchUpInside" id="Yt4-gh-8zf"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00/00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fK-qd-snz">
+                            <rect key="frame" x="183" y="17" width="72" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RQL-6N-TrP">
+                            <rect key="frame" x="58" y="10" width="117" height="31"/>
+                            <connections>
+                                <action selector="slider" destination="3Nf-ey-82A" eventType="touchUpInside" id="Mxp-MQ-Ge2"/>
+                                <action selector="sliderValueChange" destination="3Nf-ey-82A" eventType="valueChanged" id="ThF-zA-o2e"/>
+                                <action selector="startSlider" destination="3Nf-ey-82A" eventType="touchDown" id="xkw-sU-Dxo"/>
+                            </connections>
+                        </slider>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="oHI-Qf-3J2" secondAttribute="bottom" id="1G8-Zw-2wG"/>
+                        <constraint firstAttribute="centerY" secondItem="3fK-qd-snz" secondAttribute="centerY" id="6W0-4K-Jq2"/>
+                        <constraint firstAttribute="bottom" secondItem="GXl-aH-dpo" secondAttribute="bottom" id="Umt-pv-zZ8"/>
+                        <constraint firstItem="GXl-aH-dpo" firstAttribute="leading" secondItem="3fK-qd-snz" secondAttribute="trailing" constant="15" id="WyR-Oa-Lza"/>
+                        <constraint firstItem="3fK-qd-snz" firstAttribute="leading" secondItem="RQL-6N-TrP" secondAttribute="trailing" constant="10" id="aoh-Hb-Mia"/>
+                        <constraint firstAttribute="centerY" secondItem="RQL-6N-TrP" secondAttribute="centerY" id="cLG-WA-JpK"/>
+                        <constraint firstItem="RQL-6N-TrP" firstAttribute="leading" secondItem="oHI-Qf-3J2" secondAttribute="trailing" constant="10" id="eE1-iK-qFT"/>
+                        <constraint firstAttribute="trailing" secondItem="GXl-aH-dpo" secondAttribute="trailing" id="eNt-sl-1Dc"/>
+                        <constraint firstItem="GXl-aH-dpo" firstAttribute="top" secondItem="PH1-wK-SjZ" secondAttribute="top" id="qJv-DG-QUA"/>
+                        <constraint firstItem="oHI-Qf-3J2" firstAttribute="leading" secondItem="PH1-wK-SjZ" secondAttribute="leading" id="rUk-bV-xR6"/>
+                        <constraint firstItem="oHI-Qf-3J2" firstAttribute="top" secondItem="PH1-wK-SjZ" secondAttribute="top" id="vcE-k6-L4i"/>
+                        <constraint firstAttribute="height" constant="50" id="yMC-88-zI3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ZV4-S8-EQu" firstAttribute="top" secondItem="3Nf-ey-82A" secondAttribute="top" id="8dH-ii-SBO"/>
+                <constraint firstAttribute="trailing" secondItem="PH1-wK-SjZ" secondAttribute="trailing" id="AzB-ac-gdg"/>
+                <constraint firstAttribute="bottom" secondItem="ZV4-S8-EQu" secondAttribute="bottom" id="FWC-K3-yAu"/>
+                <constraint firstItem="ZV4-S8-EQu" firstAttribute="leading" secondItem="3Nf-ey-82A" secondAttribute="leading" id="GQv-wC-cgm"/>
+                <constraint firstAttribute="bottom" secondItem="PH1-wK-SjZ" secondAttribute="bottom" id="aLt-Og-jgG"/>
+                <constraint firstAttribute="trailing" secondItem="ZV4-S8-EQu" secondAttribute="trailing" id="gzP-4C-pJS"/>
+                <constraint firstItem="PH1-wK-SjZ" firstAttribute="leading" secondItem="3Nf-ey-82A" secondAttribute="leading" id="h1k-qX-oqg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="ZV4-S8-EQu" id="38C-Ir-Xl4"/>
+                <outlet property="playOrPauseBtn" destination="oHI-Qf-3J2" id="zqg-PL-crp"/>
+                <outlet property="progressSlider" destination="RQL-6N-TrP" id="Uy5-TN-Af2"/>
+                <outlet property="timeLabel" destination="3fK-qd-snz" id="dha-nf-Ex8"/>
+                <outlet property="toolView" destination="PH1-wK-SjZ" id="yJm-t9-KHb"/>
+            </connections>
+            <point key="canvasLocation" x="600" y="274"/>
+        </view>
+        <tapGestureRecognizer id="FXr-UP-OCl">
+            <connections>
+                <action selector="tapAction:" destination="3Nf-ey-82A" id="W0l-mz-OIf"/>
+            </connections>
+        </tapGestureRecognizer>
+        <swipeGestureRecognizer direction="right" id="ibs-gz-Jkz">
+            <connections>
+                <action selector="swipeAction:" destination="3Nf-ey-82A" id="9lg-Ba-Wa9"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="left" id="9QX-Bi-rVz">
+            <connections>
+                <action selector="swipeRight:" destination="3Nf-ey-82A" id="MBc-HA-znc"/>
+            </connections>
+        </swipeGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="LYPlayer.bundle/bg_media_default.jpg" width="320" height="180"/>
+        <image name="LYPlayer.bundle/full_minimize_btn" width="50" height="50"/>
+        <image name="LYPlayer.bundle/full_pause_btn" width="50" height="50"/>
+        <image name="LYPlayer.bundle/full_play_btn.png" width="50" height="50"/>
+        <image name="LYPlayer.bundle/mini_launchFullScreen_btn.png" width="50" height="40"/>
+    </resources>
+</document>

@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD6526071C303B5F00E82C55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6526061C303B5F00E82C55 /* main.m */; };
+		CD65260A1C303B5F00E82C55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6526091C303B5F00E82C55 /* AppDelegate.m */; };
+		CD65260D1C303B5F00E82C55 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65260C1C303B5F00E82C55 /* ViewController.m */; };
+		CD6526101C303B5F00E82C55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD65260E1C303B5F00E82C55 /* Main.storyboard */; };
+		CD6526121C303B5F00E82C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6526111C303B5F00E82C55 /* Assets.xcassets */; };
+		CD6526151C303B5F00E82C55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD6526131C303B5F00E82C55 /* LaunchScreen.storyboard */; };
+		CD6526201C303B5F00E82C55 /* LYPlayerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65261F1C303B5F00E82C55 /* LYPlayerExampleTests.m */; };
+		CD65262B1C303B5F00E82C55 /* LYPlayerExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65262A1C303B5F00E82C55 /* LYPlayerExampleUITests.m */; };
+		CD65266B1C303F3E00E82C55 /* LYFullView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6526641C303F3E00E82C55 /* LYFullView.m */; };
+		CD65266C1C303F3E00E82C55 /* LYFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6526661C303F3E00E82C55 /* LYFullViewController.m */; };
+		CD65266D1C303F3E00E82C55 /* LYPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD6526671C303F3E00E82C55 /* LYPlayer.bundle */; };
+		CD65266E1C303F3E00E82C55 /* LYPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6526691C303F3E00E82C55 /* LYPlayerView.m */; };
+		CD65266F1C303F3E00E82C55 /* LYPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD65266A1C303F3E00E82C55 /* LYPlayerView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD65261C1C303B5F00E82C55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD6525FA1C303B5F00E82C55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD6526011C303B5F00E82C55;
+			remoteInfo = LYPlayerExample;
+		};
+		CD6526271C303B5F00E82C55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD6525FA1C303B5F00E82C55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD6526011C303B5F00E82C55;
+			remoteInfo = LYPlayerExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD6526021C303B5F00E82C55 /* LYPlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYPlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6526061C303B5F00E82C55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD6526081C303B5F00E82C55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CD6526091C303B5F00E82C55 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CD65260B1C303B5F00E82C55 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CD65260C1C303B5F00E82C55 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CD65260F1C303B5F00E82C55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD6526111C303B5F00E82C55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD6526141C303B5F00E82C55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD6526161C303B5F00E82C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD65261B1C303B5F00E82C55 /* LYPlayerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYPlayerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD65261F1C303B5F00E82C55 /* LYPlayerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPlayerExampleTests.m; sourceTree = "<group>"; };
+		CD6526211C303B5F00E82C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD6526261C303B5F00E82C55 /* LYPlayerExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYPlayerExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD65262A1C303B5F00E82C55 /* LYPlayerExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPlayerExampleUITests.m; sourceTree = "<group>"; };
+		CD65262C1C303B5F00E82C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD6526631C303F3E00E82C55 /* LYFullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYFullView.h; sourceTree = "<group>"; };
+		CD6526641C303F3E00E82C55 /* LYFullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYFullView.m; sourceTree = "<group>"; };
+		CD6526651C303F3E00E82C55 /* LYFullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYFullViewController.h; sourceTree = "<group>"; };
+		CD6526661C303F3E00E82C55 /* LYFullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYFullViewController.m; sourceTree = "<group>"; };
+		CD6526671C303F3E00E82C55 /* LYPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LYPlayer.bundle; sourceTree = "<group>"; };
+		CD6526681C303F3E00E82C55 /* LYPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPlayerView.h; sourceTree = "<group>"; };
+		CD6526691C303F3E00E82C55 /* LYPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPlayerView.m; sourceTree = "<group>"; };
+		CD65266A1C303F3E00E82C55 /* LYPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYPlayerView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD6525FF1C303B5F00E82C55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6526181C303B5F00E82C55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6526231C303B5F00E82C55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD6525F91C303B5F00E82C55 = {
+			isa = PBXGroup;
+			children = (
+				CD6526041C303B5F00E82C55 /* LYPlayerExample */,
+				CD65261E1C303B5F00E82C55 /* LYPlayerExampleTests */,
+				CD6526291C303B5F00E82C55 /* LYPlayerExampleUITests */,
+				CD6526031C303B5F00E82C55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD6526031C303B5F00E82C55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD6526021C303B5F00E82C55 /* LYPlayerExample.app */,
+				CD65261B1C303B5F00E82C55 /* LYPlayerExampleTests.xctest */,
+				CD6526261C303B5F00E82C55 /* LYPlayerExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD6526041C303B5F00E82C55 /* LYPlayerExample */ = {
+			isa = PBXGroup;
+			children = (
+				CD6526621C303F3E00E82C55 /* LYPlayer */,
+				CD6526081C303B5F00E82C55 /* AppDelegate.h */,
+				CD6526091C303B5F00E82C55 /* AppDelegate.m */,
+				CD65260B1C303B5F00E82C55 /* ViewController.h */,
+				CD65260C1C303B5F00E82C55 /* ViewController.m */,
+				CD65260E1C303B5F00E82C55 /* Main.storyboard */,
+				CD6526111C303B5F00E82C55 /* Assets.xcassets */,
+				CD6526131C303B5F00E82C55 /* LaunchScreen.storyboard */,
+				CD6526161C303B5F00E82C55 /* Info.plist */,
+				CD6526051C303B5F00E82C55 /* Supporting Files */,
+			);
+			path = LYPlayerExample;
+			sourceTree = "<group>";
+		};
+		CD6526051C303B5F00E82C55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD6526061C303B5F00E82C55 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD65261E1C303B5F00E82C55 /* LYPlayerExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD65261F1C303B5F00E82C55 /* LYPlayerExampleTests.m */,
+				CD6526211C303B5F00E82C55 /* Info.plist */,
+			);
+			path = LYPlayerExampleTests;
+			sourceTree = "<group>";
+		};
+		CD6526291C303B5F00E82C55 /* LYPlayerExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD65262A1C303B5F00E82C55 /* LYPlayerExampleUITests.m */,
+				CD65262C1C303B5F00E82C55 /* Info.plist */,
+			);
+			path = LYPlayerExampleUITests;
+			sourceTree = "<group>";
+		};
+		CD6526621C303F3E00E82C55 /* LYPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				CD6526671C303F3E00E82C55 /* LYPlayer.bundle */,
+				CD6526681C303F3E00E82C55 /* LYPlayerView.h */,
+				CD6526691C303F3E00E82C55 /* LYPlayerView.m */,
+				CD65266A1C303F3E00E82C55 /* LYPlayerView.xib */,
+				CD6526651C303F3E00E82C55 /* LYFullViewController.h */,
+				CD6526661C303F3E00E82C55 /* LYFullViewController.m */,
+				CD6526631C303F3E00E82C55 /* LYFullView.h */,
+				CD6526641C303F3E00E82C55 /* LYFullView.m */,
+			);
+			path = LYPlayer;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD6526011C303B5F00E82C55 /* LYPlayerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD65262F1C303B5F00E82C55 /* Build configuration list for PBXNativeTarget "LYPlayerExample" */;
+			buildPhases = (
+				CD6525FE1C303B5F00E82C55 /* Sources */,
+				CD6525FF1C303B5F00E82C55 /* Frameworks */,
+				CD6526001C303B5F00E82C55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LYPlayerExample;
+			productName = LYPlayerExample;
+			productReference = CD6526021C303B5F00E82C55 /* LYPlayerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD65261A1C303B5F00E82C55 /* LYPlayerExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD6526321C303B5F00E82C55 /* Build configuration list for PBXNativeTarget "LYPlayerExampleTests" */;
+			buildPhases = (
+				CD6526171C303B5F00E82C55 /* Sources */,
+				CD6526181C303B5F00E82C55 /* Frameworks */,
+				CD6526191C303B5F00E82C55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD65261D1C303B5F00E82C55 /* PBXTargetDependency */,
+			);
+			name = LYPlayerExampleTests;
+			productName = LYPlayerExampleTests;
+			productReference = CD65261B1C303B5F00E82C55 /* LYPlayerExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD6526251C303B5F00E82C55 /* LYPlayerExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD6526351C303B5F00E82C55 /* Build configuration list for PBXNativeTarget "LYPlayerExampleUITests" */;
+			buildPhases = (
+				CD6526221C303B5F00E82C55 /* Sources */,
+				CD6526231C303B5F00E82C55 /* Frameworks */,
+				CD6526241C303B5F00E82C55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD6526281C303B5F00E82C55 /* PBXTargetDependency */,
+			);
+			name = LYPlayerExampleUITests;
+			productName = LYPlayerExampleUITests;
+			productReference = CD6526261C303B5F00E82C55 /* LYPlayerExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD6525FA1C303B5F00E82C55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = CoderYLiu;
+				TargetAttributes = {
+					CD6526011C303B5F00E82C55 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 342VP95RM8;
+					};
+					CD65261A1C303B5F00E82C55 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 342VP95RM8;
+						TestTargetID = CD6526011C303B5F00E82C55;
+					};
+					CD6526251C303B5F00E82C55 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 342VP95RM8;
+						TestTargetID = CD6526011C303B5F00E82C55;
+					};
+				};
+			};
+			buildConfigurationList = CD6525FD1C303B5F00E82C55 /* Build configuration list for PBXProject "LYPlayerExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD6525F91C303B5F00E82C55;
+			productRefGroup = CD6526031C303B5F00E82C55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD6526011C303B5F00E82C55 /* LYPlayerExample */,
+				CD65261A1C303B5F00E82C55 /* LYPlayerExampleTests */,
+				CD6526251C303B5F00E82C55 /* LYPlayerExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD6526001C303B5F00E82C55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD6526151C303B5F00E82C55 /* LaunchScreen.storyboard in Resources */,
+				CD65266F1C303F3E00E82C55 /* LYPlayerView.xib in Resources */,
+				CD65266D1C303F3E00E82C55 /* LYPlayer.bundle in Resources */,
+				CD6526121C303B5F00E82C55 /* Assets.xcassets in Resources */,
+				CD6526101C303B5F00E82C55 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6526191C303B5F00E82C55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6526241C303B5F00E82C55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD6525FE1C303B5F00E82C55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD65266E1C303F3E00E82C55 /* LYPlayerView.m in Sources */,
+				CD65260D1C303B5F00E82C55 /* ViewController.m in Sources */,
+				CD65266C1C303F3E00E82C55 /* LYFullViewController.m in Sources */,
+				CD65260A1C303B5F00E82C55 /* AppDelegate.m in Sources */,
+				CD65266B1C303F3E00E82C55 /* LYFullView.m in Sources */,
+				CD6526071C303B5F00E82C55 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6526171C303B5F00E82C55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD6526201C303B5F00E82C55 /* LYPlayerExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6526221C303B5F00E82C55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD65262B1C303B5F00E82C55 /* LYPlayerExampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD65261D1C303B5F00E82C55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD6526011C303B5F00E82C55 /* LYPlayerExample */;
+			targetProxy = CD65261C1C303B5F00E82C55 /* PBXContainerItemProxy */;
+		};
+		CD6526281C303B5F00E82C55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD6526011C303B5F00E82C55 /* LYPlayerExample */;
+			targetProxy = CD6526271C303B5F00E82C55 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD65260E1C303B5F00E82C55 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD65260F1C303B5F00E82C55 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD6526131C303B5F00E82C55 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD6526141C303B5F00E82C55 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD65262D1C303B5F00E82C55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CD65262E1C303B5F00E82C55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD6526301C303B5F00E82C55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LYPlayerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoderYLiu.LYPlayerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD6526311C303B5F00E82C55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LYPlayerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoderYLiu.LYPlayerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CD6526331C303B5F00E82C55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LYPlayerExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoderYLiu.LYPlayerExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYPlayerExample.app/LYPlayerExample";
+			};
+			name = Debug;
+		};
+		CD6526341C303B5F00E82C55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LYPlayerExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoderYLiu.LYPlayerExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYPlayerExample.app/LYPlayerExample";
+			};
+			name = Release;
+		};
+		CD6526361C303B5F00E82C55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LYPlayerExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoderYLiu.LYPlayerExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LYPlayerExample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CD6526371C303B5F00E82C55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LYPlayerExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoderYLiu.LYPlayerExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LYPlayerExample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD6525FD1C303B5F00E82C55 /* Build configuration list for PBXProject "LYPlayerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD65262D1C303B5F00E82C55 /* Debug */,
+				CD65262E1C303B5F00E82C55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD65262F1C303B5F00E82C55 /* Build configuration list for PBXNativeTarget "LYPlayerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD6526301C303B5F00E82C55 /* Debug */,
+				CD6526311C303B5F00E82C55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD6526321C303B5F00E82C55 /* Build configuration list for PBXNativeTarget "LYPlayerExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD6526331C303B5F00E82C55 /* Debug */,
+				CD6526341C303B5F00E82C55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD6526351C303B5F00E82C55 /* Build configuration list for PBXNativeTarget "LYPlayerExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD6526361C303B5F00E82C55 /* Debug */,
+				CD6526371C303B5F00E82C55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD6525FA1C303B5F00E82C55 /* Project object */;
+}
