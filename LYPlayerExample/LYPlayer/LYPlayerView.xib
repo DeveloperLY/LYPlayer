@@ -57,6 +57,7 @@
                         </label>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RQL-6N-TrP">
                             <rect key="frame" x="58" y="10" width="117" height="31"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="slider" destination="3Nf-ey-82A" eventType="touchUpInside" id="Mxp-MQ-Ge2"/>
                                 <action selector="sliderValueChange" destination="3Nf-ey-82A" eventType="valueChanged" id="ThF-zA-o2e"/>
