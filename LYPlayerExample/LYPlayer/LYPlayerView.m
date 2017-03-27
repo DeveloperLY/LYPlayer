@@ -65,6 +65,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     // 初始化Player和Layer
     self.player = [[AVPlayer alloc] init];
     self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
