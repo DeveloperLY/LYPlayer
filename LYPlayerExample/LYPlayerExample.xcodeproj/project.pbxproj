@@ -94,6 +94,7 @@
 		CD6525F91C303B5F00E82C55 = {
 			isa = PBXGroup;
 			children = (
+				CD6526621C303F3E00E82C55 /* LYPlayer */,
 				CD6526041C303B5F00E82C55 /* LYPlayerExample */,
 				CD65261E1C303B5F00E82C55 /* LYPlayerExampleTests */,
 				CD6526291C303B5F00E82C55 /* LYPlayerExampleUITests */,
@@ -114,7 +115,6 @@
 		CD6526041C303B5F00E82C55 /* LYPlayerExample */ = {
 			isa = PBXGroup;
 			children = (
-				CD6526621C303F3E00E82C55 /* LYPlayer */,
 				CD6526081C303B5F00E82C55 /* AppDelegate.h */,
 				CD6526091C303B5F00E82C55 /* AppDelegate.m */,
 				CD65260B1C303B5F00E82C55 /* ViewController.h */,
@@ -231,8 +231,9 @@
 		CD6525FA1C303B5F00E82C55 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LY;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = CoderYLiu;
+				ORGANIZATIONNAME = DeveloperLY;
 				TargetAttributes = {
 					CD6526011C303B5F00E82C55 = {
 						CreatedOnToolsVersion = 7.2;
@@ -450,7 +451,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LYPlayerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderYLiu.LYPlayerExample;
+				PRODUCT_BUNDLE_IDENTIFIER = net.developerly.LYPlayerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -461,7 +462,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LYPlayerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderYLiu.LYPlayerExample;
+				PRODUCT_BUNDLE_IDENTIFIER = net.developerly.LYPlayerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -533,6 +534,7 @@
 				CD6526311C303B5F00E82C55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD6526321C303B5F00E82C55 /* Build configuration list for PBXNativeTarget "LYPlayerExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +543,7 @@
 				CD6526341C303B5F00E82C55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD6526351C303B5F00E82C55 /* Build configuration list for PBXNativeTarget "LYPlayerExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +552,7 @@
 				CD6526371C303B5F00E82C55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
