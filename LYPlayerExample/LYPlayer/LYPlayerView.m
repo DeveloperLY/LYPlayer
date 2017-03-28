@@ -12,14 +12,16 @@
 
 @interface LYPlayerView ()
 
-/** 播放器 */
+/** Player */
 @property (nonatomic, strong) AVPlayer *player;
 
-/** 播放器的Layer */
+/** PlayerItem */
+@property (nonatomic, weak) AVPlayerItem *playerItem;
+
+/** PlayerLayer */
 @property (nonatomic, weak) AVPlayerLayer *playerLayer;
 
-/** playItem */
-@property (nonatomic, weak) AVPlayerItem *currentItem;
+
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIView *toolView;
@@ -57,13 +59,24 @@
 
 @implementation LYPlayerView
 
-// 快速创建View的方法
-+ (instancetype)playerView {
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+#pragma mark - Initialize
+
+- (instancetype)init {
+    if (self = [super init]) {
+        [self initialize];
+    }
+    return self;
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    [self initialize];
+}
+
+/**
+ * initialize Player
+ */
+- (void)initialize {
     // 初始化Player和Layer
     self.player = [[AVPlayer alloc] init];
     self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
@@ -82,6 +95,18 @@
     self.playOrPauseBtn.selected = YES;
 }
 
+#pragma mark - layoutSubviews
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.playerLayer.frame = self.bounds;
+}
+
+// 快速创建View的方法
++ (instancetype)playerView {
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+}
+
 #pragma mark - 观察者对应的方法
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"status"]) {
@@ -95,24 +120,17 @@
     }
 }
 
-#pragma mark - 重新布局
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    
-    self.playerLayer.frame = self.bounds;
-}
-
 #pragma mark - 设置播放的视频
 - (void)setUrlString:(NSString *)urlString {
     _urlString = urlString;
     
     NSURL *url = [NSURL URLWithString:urlString];
     AVPlayerItem *item = [AVPlayerItem playerItemWithURL:url];
-    self.currentItem = item;
+    self.playerItem = item;
     
-    [self.player replaceCurrentItemWithPlayerItem:self.currentItem];
+    [self.player replaceCurrentItemWithPlayerItem:self.playerItem];
     
-    [self.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+    [self.playerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
     
     [self.player play];
 }
