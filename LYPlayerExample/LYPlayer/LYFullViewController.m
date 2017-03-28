@@ -15,8 +15,7 @@
 
 @implementation LYFullViewController
 
-- (void)loadView
-{
+- (void)loadView {
     LYFullView *fullView = [[LYFullView alloc] init];
     self.view = fullView;
 }
@@ -25,13 +24,11 @@
     [super viewDidLoad];
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-{
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskLandscape;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
     return YES;
 }
 

@@ -26,8 +26,7 @@
     [self.playView setUrlString:@"http://v1.mukewang.com/a45016f4-08d6-4277-abe6-bcfd5244c201/L.mp4"];
 }
 
-- (void)setUpVideoPlayView
-{
+- (void)setUpVideoPlayView {
     LYPlayerView *playView = [LYPlayerView playerView];
     playView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.width * 9 / 16);
     [self.view addSubview:playView];

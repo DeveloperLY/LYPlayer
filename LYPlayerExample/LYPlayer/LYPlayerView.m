@@ -58,13 +58,11 @@
 @implementation LYPlayerView
 
 // 快速创建View的方法
-+ (instancetype)playerView
-{
++ (instancetype)playerView {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
 }
 
-- (void)awakeFromNib
-{
+- (void)awakeFromNib {
     [super awakeFromNib];
     // 初始化Player和Layer
     self.player = [[AVPlayer alloc] init];
@@ -85,8 +83,7 @@
 }
 
 #pragma mark - 观察者对应的方法
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"status"]) {
         AVPlayerItemStatus status = [[change objectForKey:NSKeyValueChangeNewKey] integerValue];
         if (AVPlayerItemStatusReadyToPlay == status) {
@@ -99,16 +96,14 @@
 }
 
 #pragma mark - 重新布局
-- (void)layoutSubviews
-{
+- (void)layoutSubviews {
     [super layoutSubviews];
     
     self.playerLayer.frame = self.bounds;
 }
 
 #pragma mark - 设置播放的视频
-- (void)setUrlString:(NSString *)urlString
-{
+- (void)setUrlString:(NSString *)urlString {
     _urlString = urlString;
     
     NSURL *url = [NSURL URLWithString:urlString];
@@ -139,8 +134,7 @@
     [self swipeToRight:NO];
 }
 
-- (void)swipeToRight:(BOOL)isRight
-{
+- (void)swipeToRight:(BOOL)isRight {
     // 获取当前播放的时间
     NSTimeInterval currentTime = CMTimeGetSeconds(self.player.currentItem.currentTime);
     
@@ -161,8 +155,7 @@
     [self updateProgressInfo];
 }
 
-- (void)showToolView:(BOOL)isShow
-{
+- (void)showToolView:(BOOL)isShow {
     [UIView animateWithDuration:0.5 animations:^{
         self.toolView.alpha = !self.isShowToolView;
         self.showToolView = !self.isShowToolView;
@@ -184,48 +177,41 @@
 }
 
 #pragma mark - 定时器操作
-- (void)addProgressTimer
-{
+- (void)addProgressTimer {
     self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateProgressInfo) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:self.progressTimer forMode:NSRunLoopCommonModes];
 }
 
-- (void)removeProgressTimer
-{
+- (void)removeProgressTimer {
     [self.progressTimer invalidate];
     self.progressTimer = nil;
 }
 
-- (void)updateProgressInfo
-{
+- (void)updateProgressInfo {
     // 更新时间
     self.timeLabel.text = [self timeString];
     
     self.progressSlider.value = CMTimeGetSeconds(self.player.currentTime) / CMTimeGetSeconds(self.player.currentItem.duration);
 }
 
-- (NSString *)timeString
-{
+- (NSString *)timeString {
     NSTimeInterval duration = CMTimeGetSeconds(self.player.currentItem.duration);
     NSTimeInterval currentTime = CMTimeGetSeconds(self.player.currentTime);
     
     return [self stringWithCurrentTime:currentTime duration:duration];
 }
 
-- (void)addShowTimer
-{
+- (void)addShowTimer {
     self.showTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(updateShowTime) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:self.showTimer forMode:NSRunLoopCommonModes];
 }
 
-- (void)removeShowTimer
-{
+- (void)removeShowTimer {
     [self.showTimer invalidate];
     self.showTimer = nil;
 }
 
-- (void)updateShowTime
-{
+- (void)updateShowTime {
     self.showTime += 1;
     
     if (self.showTime > 2.0) {
@@ -243,8 +229,7 @@
     [self videoplayViewSwitchOrientation:sender.selected];
 }
 
-- (void)videoplayViewSwitchOrientation:(BOOL)isFull
-{
+- (void)videoplayViewSwitchOrientation:(BOOL)isFull {
     if (isFull) {
         [self.contrainerViewController presentViewController:self.fullVc animated:NO completion:^{
             [self.fullVc.view addSubview:self];
@@ -281,8 +266,7 @@
     self.timeLabel.text = [self stringWithCurrentTime:currentTime duration:duration];
 }
 
-- (NSString *)stringWithCurrentTime:(NSTimeInterval)currentTime duration:(NSTimeInterval)duration
-{
+- (NSString *)stringWithCurrentTime:(NSTimeInterval)currentTime duration:(NSTimeInterval)duration {
     NSInteger dMin = duration / 60;
     NSInteger dSec = (NSInteger)duration % 60;
     
@@ -296,8 +280,7 @@
 }
 
 #pragma mark - 懒加载代码
-- (LYFullViewController *)fullVc
-{
+- (LYFullViewController *)fullVc {
     if (_fullVc == nil) {
         _fullVc = [[LYFullViewController alloc] init];
     }
