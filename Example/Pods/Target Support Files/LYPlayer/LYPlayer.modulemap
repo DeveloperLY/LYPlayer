@@ -1,0 +1,6 @@
+framework module LYPlayer {
+  umbrella header "LYPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,23 @@
+PODS:
+  - LYPlayer (1.0.0):
+    - Masonry (~> 1.1.0)
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - LYPlayer (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+
+EXTERNAL SOURCES:
+  LYPlayer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LYPlayer: 87a99cc449382da636d9d907e5509ad5a4dfadb9
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: c8c695ea78c47572e9fc309c618d44cb333ea5f3
+
+COCOAPODS: 1.8.1
